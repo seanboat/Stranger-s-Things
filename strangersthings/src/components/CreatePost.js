@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { getTokenFromLocalStorage } from "../util";
 import { API_URL } from "../config";
-import { FormContainer } from "../layout";
+import { FormContainer } from "./layout";
 
 export default function CreatePost({ posts, setPosts, updateMe }) {
   const history = useHistory();

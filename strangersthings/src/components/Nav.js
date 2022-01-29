@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, useHistory } from "react-router-dom";
-import { setTokenNull } from "../util/token";
+import { setTokenNull } from "../util";
 
 const NavContainer = styled.nav`
   display: flex;

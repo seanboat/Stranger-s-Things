@@ -7,7 +7,7 @@ import { API_URL } from "./config";
 import {
   Nav,
   Posts,
-  CreatePosts,
+  CreatePost,
   LoginOrRegister,
   Me,
   CreateMessage,
@@ -65,7 +65,8 @@ export default function App() {
         console.error(error);
       }
     };
-  });
+    getMe();
+  }, [token]);
 
   const updateMe = () => {
     setMeFlag(!meFlag);
@@ -99,7 +100,7 @@ export default function App() {
               exact
               path={"/login"}
               render={() => (
-                <LogInOrRegister
+                <LoginOrRegister
                   setToken={setToken}
                   setIsLoggedIn={setIsLoggedIn}
                 />
@@ -109,7 +110,7 @@ export default function App() {
               exact
               path={"/register"}
               render={() => (
-                <LogInOrRegister
+                <LoginOrRegister
                   setToken={setToken}
                   setIsLoggedIn={setIsLoggedIn}
                 />

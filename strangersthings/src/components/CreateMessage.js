@@ -33,8 +33,10 @@ export default function CreateMessage({ token }) {
   const history = useHistory();
   const { search } = useLocation();
   const searchObj = new URLSearchParams(search);
-  const { postId } = useParams;
+  const { postId } = useParams();
   const title = searchObj.get("title");
+
+  console.log(postId, title);
 
   const [content, setContent] = useState("");
 
@@ -69,7 +71,7 @@ export default function CreateMessage({ token }) {
     <CreateMessageContainer>
       <h2>Message the seller</h2>
       <p>Title: {title}</p>
-      <form onsubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label htmlFor={"content"}>Message:</label>
         <textarea onChange={handleChange}></textarea>
         <input type="submit" value="send message" />

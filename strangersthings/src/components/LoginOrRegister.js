@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { API_URL } from "../config";
-import { FormContainer } from "../layout/FormContainer";
+import { FormContainer } from "./layout";
 import { setTokenOnLocalStorage } from "../util";
 
 export default function LoginOrRegister({ setToken, setIsLoggedIn }) {
