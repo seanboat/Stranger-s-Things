@@ -4,6 +4,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { getTokenFromLocalStorage } from "./util";
 import { API_URL } from "./config";
 
+import {
+  Nav,
+  Posts,
+  CreatePosts,
+  LoginOrRegister,
+  Me,
+  CreateMessage,
+} from "./components";
+
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(null);
